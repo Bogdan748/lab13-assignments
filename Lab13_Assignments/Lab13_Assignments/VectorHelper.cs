@@ -31,6 +31,24 @@ namespace Lab13_Assignments
             if (array.Length - 1 == n) return array[n];
 
             return Math.Min(array[n], RecursiveMin(array, n + 1));
+
         }
+
+        public static int RecursiveSum(int[] array)
+        {
+            return RecursiveSum(array, 0);
+        }
+
+        private static int RecursiveSum(int[] array, int n)
+        {
+            RecursiveSteps += 1;
+
+            if (array.Length - 1 == n) return array[n];
+
+            return array[n] + RecursiveSum(array, n + 1);
+
+        }
+
+
     }
 }
